@@ -9,6 +9,7 @@ app.all("/r", (req, res) => {
   try {
     const { url } = req.query;
     res.redirect(url);
+    console.log("redirect", url);
   } catch (err) {
     console.log("err");
     res.sendStatus(500);
